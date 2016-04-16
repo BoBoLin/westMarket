@@ -4,20 +4,20 @@
 	<head>
 		<meta http-equiv= "Content-Type" content= "text/html; charset= utf-8">
 		<title>student number</title>
-	</head>
 
-	<script src= "https://code.jquery.com/jquery-2.2.3.min.js"></script>
-	<script>
-		function checkout()
-		{
-			$.get("do.njs?id=" + $("#id").val(), function(data)
-			    {
-			    	$("#name").html(data);
-			    }
-			    );
-			return 0 ;
-		}
-	</script>
+		<script src= "https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script>
+			function checkout()
+			{
+				$.get("do.njs?id=" + $("#id").val(), function(data)
+			    	{
+			    		$("#name").html(data);
+			    	}
+			    	);
+				return 0 ;
+			}
+		</script>
+	</head>
 	
 	<body>
 		<form onsubmit= "return chckout()">
