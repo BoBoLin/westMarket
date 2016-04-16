@@ -1,33 +1,22 @@
-<!DOCTYPE HTML>
-
 <html>
-	<head>
-		<meta http-equiv= "Content-Type" content= "text/html; charset= utf-8">
-		<title>student number</title>
+  <head>
+    <title>Ajax Exercise</title>
 
-		<script src= "https://code.jquery.com/jquery-2.2.3.min.js"></script>
-		<script>
-			function checkout()
-			{
-				$.get("do.njs?id=" + $("#id").val(), function(data)
-			    	{
-			    		$("#name").html(data);
-			    	}
-			    	);
-				return 0 ;
-			}
-		</script>
-	</head>
-	
-	<body>
-		<form onsubmit= "return checkout()">
-			<input id = 'id' placeholder= 'student number' type= 'id'/>
-			<input type = 'submit' value = "submit" />
-		</form>
-
-		<p id= "name"></p>
-		xxxxxxxxxxxxx
-
-	</body>
-
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+      function onSubmit() {
+        $.get("do.njs?id=" + $("#id").val(), function(data) {
+          $("#name").html(data);
+        });
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return onSubmit()">
+      <input type="id" id="id" />
+      <input type="submit" value="查詢" />
+    </form>
+    <p id="name"></p>
+  </body>
 </html>
