@@ -14,6 +14,10 @@ console.log('Content-type: text/html; charset=utf-8\n');
 var name = line[param['id'].toUpperCase()];
 
 if (typeof name == 'undefined')
+{
 	console.log('無此學號');
+}
 else
-  console.log(name);
+{
+	console.log(name);
+}
