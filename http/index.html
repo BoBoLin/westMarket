@@ -5,15 +5,28 @@
 		<meta http-equiv= "Content-Type" content= "text/html; charset= utf-8">
 		<title>student number</title>
 	</head>
+
+	<script src= "https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script>
+		function checkout()
+		{
+			$.get("do.njs?id=" + $("id").val(), funtion(data)
+			    {
+			    	$("#name").html(data);
+			    }
+			    );
+			return 0 ;
+		}
+	</script>
 	
 	<body>
-		<form action= "do" target= '_blank'>
-		<input name = 'id' placeholder= 'name' type= 'text'>
-		<button type = 'submit'> submit </button>
+		<form action= "do" onsubmit= "chckout()">
+			<input name = 'id' placeholder= 'name' type= 'text'>
+			<button type = 'submit'>Submit</button>
 		</form>
 
+		<p id= "name"></p>
+
 	</body>
-
-
 
 </html>
