@@ -14,16 +14,16 @@ app.get('/', function(req, res) {
 
 app.get('/ID', function(req, res) {
   var studentID = req.query.student;
-  var name = JSON.parse(fs.readFileSync('./public/name.json', 'utf8'));
-
-  name = (typeof name[studentID] === 'undefined') ? '沒有此學號，請再輸入一次' : name[studentID] ;
+  var name = JSON.parse(fs.readFileSync('./name.json', 'utf8'));
 
   res.header('content-type','text/html');
   res.header('charset','utf-8');
+
+  name = (typeof name[studentID.toUpperCase()] == 'undefined') ? '沒有此學號，請再輸入一次' : name[studentID.toUpperCase()] ;
   
   res.send(name);
-
   res.end();
+
 });
 
 app.listen(port, function () {

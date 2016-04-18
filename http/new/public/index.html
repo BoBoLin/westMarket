@@ -1,26 +1,26 @@
 <html>
 
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf8">
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
+ <meta http-equiv= "Content-Type" content="text/html; charset=utf8">
+ <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<title>Student System ! </title>
 </head>
 
 <body>
 
-  <input name="student" placeholder="Student ID">
-  <button type="submit">submit</button>
+  <input name= "student" placeholder="Student ID">
+  <button type= "submit">submit</button>
 
   <h2>Student ID is :
-  <span id="result"> </span>
-</h2>
+  <span id= "result"> </span>
+	</h2>
 <script>
 	$(document).ready(function(){
 	$('button[type=submit]').click(function(){
 	    $.ajax({
 	    	type:"GET",
 		data:{
-			student:$('input[name=student]').val()
+			student:$('input[name= student]').val()
 		},
 		url: '/ID',
 		success:function(data){
