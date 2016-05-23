@@ -1,0 +1,201 @@
+div{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+html,body{
+	overflow:hidden;
+	font-family: 'cwTeXMing', 微軟正黑體,Georgia ;
+	text-align:center;
+	background: rgb(246, 243, 236);
+
+	position: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#overlay-init{
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(246, 243, 236);
+    z-index: 5;
+
+    text-align: center;
+    line-height: 100vh;
+    letter-spacing: 3px;
+    /* font-weight: bold; */
+    letter-spacing: 8px;
+	color: white;
+	font-size: 10vh;
+	text-shadow: 0 0 50px rgba(0,0,0,0.3);
+}
+#overlay-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	filter: alpha(opacity=60);
+	z-index: 2;
+	display: none;
+}
+
+#replay-btn{
+	position: fixed;
+	left: 5vh;
+	bottom: 5vh;
+	z-index: 1;
+}
+#logo-btn{
+	position: fixed;
+	left: 5vh;
+	top:5vh;
+	z-index: 1;
+}
+
+/***********/
+
+#wall{
+    position: absolute;
+	top:-30vh;
+	right:-30vw;
+	margin: 0 auto; 
+
+    width: 200vw;
+    height: 160vh;
+    top: -30vh;
+    left: -50vw;
+
+	display: inline-block;
+    -webkit-transition: -webkit-transform 0.5s;
+}
+.card{
+	position: relative;
+	top: 0; left: 0;
+	margin: 1vw;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	width: 40vw;
+	height: auto;
+}
+.front:hover{
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    transition: box-shadow .2s ease-in-out;
+    -webkit-filter: initial;
+    filter: initial;
+    transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+/*.card:nth-child(1) {
+}*/
+.front,.back {
+	display: inline-block;
+	width: 100%;
+	height: auto; 
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+.front{
+	-webkit-filter:opacity(30%);
+	filter:opacity(30%);
+}
+.back{
+	background: rgb(214, 212, 207);
+	box-sizing: border-box;
+}
+
+.card1{
+	width:45vw;
+}
+
+.card2{
+	width:50vw;
+}
+
+/*********effects*******/
+
+.front,.back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	/* transform-origin: 50% 50%; */
+}
+.back{
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.card.effect.opened .front {
+	z-index:3;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.card.effect.opened .back {
+	z-index:3;
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	transform: scale(1.2,1.2);
+}
+
+/********************/
+/* text */
+p{
+    padding: 10% 12% 10% 0%;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: left;
+    writing-mode: vertical-rl;
+    float: right;
+    height: 100%;
+    box-sizing: border-box;
+}
+p.sign{
+	text-align=right;
+	padding: 0;
+	float: left;
+    padding: 28% 0 8% 4%;
+    font-size: 80%;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    /* For mobiles: */
+    [html,body]{
+    	overflow: auto;
+    }
+
+    p{
+	    padding: 5% 2% 5% 0%;
+	    font-size: 60%;
+	    text-align: left;
+	    writing-mode: vertical-rl;
+	    float: right;
+	    line-height: 120%;
+	    height: 100%;
+	    letter-spacing: 1px;
+	}
+
+	p.sign{
+		text-align=right;
+		padding: 0;
+		float: left;
+		padding: 30% 0 4% 2%;
+		font-size: 50%;
+
+	.card.effect.opened .back {
+    	/* transform: scale(1.5,1.5); */
+    	
+	}
+
+}

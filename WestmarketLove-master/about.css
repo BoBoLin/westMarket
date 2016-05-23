@@ -1,0 +1,137 @@
+* {margin: 0;  padding: 0;}
+
+html,body{
+/*	scroll-behavior: smooth;*/
+	height: 100%;
+	overflow:hidden;
+	font-family: 'cwTeXMing', 微軟正黑體 ;
+}
+
+span{
+	position: relative;
+}
+#parent {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: -32px;
+	bottom: 0;	
+	padding-right: 15px;
+	overflow-y: scroll;
+}
+
+#bg{
+  background: url("img/bg-main.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title{
+	height:100vh;
+}
+.title h3 {
+	padding-top:20vh;
+  text-align:center;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+}
+.title h1{
+	margin:5%;
+	text-align:center;
+	font-size: 80px;
+	font-weight: 100;
+	color: white;
+	text-shadow: 0 0 50px rgba(0,0,0,0.7);
+}
+
+.intro{
+	padding: 10%;
+  text-align:center;  
+  background:rgba(0, 0, 0, 0.06);
+  height: 30vh;
+
+}
+
+.intro-box-bg{
+  width:28%;
+  height: 25vh;
+  margin:0 auto;
+  background:rgba(255, 255, 255, 0.3);
+}
+.intro-box{
+  display:none;
+  position: relative;
+  top: -25vh;
+  box-sizing: border-box;
+  width:28%;
+  height: 25vh;
+  margin:0 auto;
+  padding:40px 35px 45px 35px;
+  background:white;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+.intro-box p{
+	padding-top: 20px;
+	font-size: 15px;
+}
+.us {
+	height: 90vh;
+	padding: 0 8vw;
+	background:url("img/bg-bottom.jpg");
+	background-size: cover;
+}
+
+.say{
+    position: relative;
+    color: white;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: 100;
+}
+.us h2{
+    padding: 20% 0 5% 0;
+    height: 15%;
+    font-size: 34px;
+    font-weight: 500;
+}
+.us h4{
+	height: 10%;
+}
+
+.row{
+	margin: 20px 0;
+}
+
+.face1{	background: url("img/1.png");}
+.face2{	background: url("img/2.png");}
+.face3{	background: url("img/3.jpg");}
+.face4{	background: url("img/4.jpg");}
+.face5{	background: url("img/5.jpg");}
+.face6{	background: url("img/6.jpg");}
+.face7{	background: url("img/7.jpg");}
+.face8{	background: url("img/8.jpg");}
+.face1:hover,.face2:hover,.face3:hover,.face4:hover,.face5:hover,.face6:hover,.face7:hover,.face8:hover{	background-size: 120% auto;}
+
+.face1,.face2,.face3,.face4,.face5,.face6,.face7,.face8{
+	width: 8vw;
+	height: 8vw;
+	margin: 1vw;
+	float: left;
+    cursor: pointer;
+	border-radius: 50%;
+    background-size: 100% auto;
+    background-position: center;
+    background-size: cover;
+    text-align:center
+    display:inline-block;
+}
+
+.bottom-nav{
+  color:white;
+  background:#111111;
+  text-align:center;
+  line-height:10vh;
+  z-index:10;
+}

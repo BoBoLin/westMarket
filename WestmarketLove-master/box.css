@@ -1,0 +1,95 @@
+/* external css: flickity.css */
+/****effect***********/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* external css: flickity.css */
+
+.gallery{
+  margin: auto 0;
+  margin-top:10vh;
+  margin-bottom:7vh;
+  height:80vh;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+
+.gallery-cell {
+  width: 66%;
+  height:80vh;
+  margin-right: 50px;
+  counter-increment: gallery-cell;
+}
+/************************/
+.card{
+  position: relative;
+  top: 0; left: 0;
+  margin: auto 0;
+  height: auto;
+  width:auto;
+  -webkit-transform: translate(0,-50%);
+  top: 50%;
+  background-size:contain ;
+}
+.front{
+  position:relative;
+  margin:auto 0;
+
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  object-fit: contain;
+
+ 
+  -webkit-filter:initial;
+  filter:initial;
+
+}
+
+.back{
+  position:absolute;
+  top:0;
+  height:100%;
+  width:100%;
+  background:hsl(42,17%,84%);
+}
+
+.card.effect.opened .back {
+  transform: scale(1,1);
+}
+
+@media only screen and (max-width: 800px)
+p {
+    padding: 6% 8% 6% 0%;
+    font-size: 80%;
+    text-align: left;
+    writing-mode: vertical-rl;
+    float: right;
+    line-height: 150%;
+    height: 100%;
+    letter-spacing: 1px;
+}
